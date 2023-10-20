@@ -1,4 +1,4 @@
-# Follow the steps to upload large file into github.
+<h3> Follow the steps to upload large file into github. </h3>
 
 # Step 1, Install the lfs module from github using the following commnad. 
 
