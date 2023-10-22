@@ -1,0 +1,29 @@
+Debug: ON🔍⚠
+Watchdogs Initialised!✅🐶
+WebSocket server listening on port 9220!🚀
+HTTP Control server listening on port 3000!🚀
+Handling WebSocket request from url /do0142
+Upgrading do0142...
+Handling WebSocket request from url /Ampn05/Ampn05
+Upgrading Ampn05...
+Handling WebSocket request from url /cncskz
+Upgrading cncskz...
+MQTT Client Connected!✅
+{ device_id: 'do0142', message: '[2,"8182","Heartbeat",{}]' }
+{
+  device_id: 'Ampn05',
+  message: '[2,"23","StatusNotification",{"connectorId":1,"errorCode":"PowerMeterFailure","info":"Error","status":"Unavailable","timestamp":"2023-09-15T04:33:32Z","vendorId":"Exicom","vendorErrorCode":"EmergencyStop"}]'
+}
+Handling WebSocket request from url /pfpzb5
+Upgrading pfpzb5...
+{
+  device_id: 'do0142',
+  message: '[2,"8183","StartTransaction",{"connectorId":1,"idTag":"123456","meterStart":2860,"timestamp":"2023-06-03T13:41:00Z"}]'
+}
+{ device_id: 'pfpzb5', message: '[2,"4136","Heartbeat",{}]' }
+Handling WebSocket request from url /244s3n
+Upgrading 244s3n...
+{
+  device_id: 'pfpzb5',
+  message: '[2,"4137","StartTransaction",{"connectorId":1,"idTag":"336699","meterStart":7770,"timestamp":"2023-05-24T11:14:15Z"}]'
+}
