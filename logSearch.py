@@ -1,25 +1,23 @@
 #import resource
 import os
+import re
 
 file_name = "kazam-qrh55z.txt"
+output_filename = os.path.normpath("output1.log")
+regex = r"{\s*device_id:\s*'do0142'[\s\S]*?}(?=\n\n|$)"
 
-print(f'File Size is {os.stat(file_name).st_size / (1024 * 1024)} MB')
 
-txt_file = open(file_name, encoding="utf8")
+with open("kazam-qrh55z.txt", 'r', encoding="utf8") as input:
+    line = input.read()
 
-count = 0
-word = 'qrh55z'
-output_filename = os.path("output.log")
+with open("output1.log", 'w', encoding="utf8") as output:
 
-for line in txt_file:
-    # we can process file line by line here, for simplicity I am taking count of lines
-    count += 1
-    if line.find(word) != -1:
-        # Overwrites the file, ensure we're starting out with a blank file
-        with open(output_filename, "a", encoding="utf8") as out_file:
-            out_file.write(line)
-            
+    matches = re.finditer(regex, line, re.MULTILINE)
 
-txt_file.close()
+    for matchNum, match in enumerate(matches, start=1):
 
-print(f'Number of Lines in the file is {count}')
+        #print ("{match}".format(match = match.group()))
+        output.write("{match}".format(match = match.group())+'\n')
+
+print("file created successfully")
+
