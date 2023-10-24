@@ -3,6 +3,12 @@ import os
 import re
 
 file_name = "kazam-qrh55z.txt"
+
+"""
+path = rf"C:\Users\HP\Documents\dev\Logs\{device_id}"
+>>> path
+'C:\\Users\\HP\\Documents\\dev\\Logs\\xyz'
+"""
 output_filename = os.path.normpath("output1.log")
 regex = r"{\s*device_id:\s*'do0142'[\s\S]*?}(?=\n\n|$)"
 
