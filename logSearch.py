@@ -4,19 +4,18 @@ import re
 
 file_name = "kazam-qrh55z.txt"
 
-"""
+device_id = "do0142"
+
 path = rf"C:\Users\HP\Documents\dev\Logs\{device_id}"
->>> path
-'C:\\Users\\HP\\Documents\\dev\\Logs\\xyz'
-"""
-output_filename = os.path.normpath("output1.log")
+
+output_filename = os.path.normpath(path)
 regex = r"{\s*device_id:\s*'do0142'[\s\S]*?}(?=\n\n|$)"
 
 
 with open("kazam-qrh55z.txt", 'r', encoding="utf8") as input:
     line = input.read()
 
-with open("output1.log", 'w', encoding="utf8") as output:
+with open(output_filename+".txt", 'w', encoding="utf8") as output:
 
     matches = re.finditer(regex, line, re.MULTILINE)
 
