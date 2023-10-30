@@ -12,7 +12,7 @@ output_filename = os.path.normpath(path)
 regex = r"{\s*device_id:\s*'do0142'[\s\S]*?}(?=\n\n|$)"
 
 
-with open("kazam-qrh55z.txt", 'r', encoding="utf8") as input:
+with open(file_name, 'r', encoding="utf8") as input:
     line = input.read()
 
 with open(output_filename+".txt", 'w', encoding="utf8") as output:
